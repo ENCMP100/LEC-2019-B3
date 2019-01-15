@@ -24,12 +24,15 @@ myRand2 = rand
 % getting the state of the random number generator and restoring it later
 rngState = rng;
 
-rand % just generating two random numbers
+% just generating two random numbers
+rand 
 rand
 
 rng(rngState)
 
-rand % generating two more random numbers. Note that these two are the same as the last two random numbers
+% generating two more random numbers. Note that these two are the same as
+% the last two random numbers
+rand 
 rand
 
 
