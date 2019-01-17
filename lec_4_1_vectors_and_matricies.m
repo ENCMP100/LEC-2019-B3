@@ -1,4 +1,4 @@
-% Lecture 3, part 2: Vectors and Matricies
+% Lecture 4, Vectors and Matricies
 % Chapter 2.1 Attaway
 
 % Initializing a row vector
@@ -37,7 +37,7 @@ vecB = linspace(1, 10, 5);
 VecC = ?
 
 
-% Accessing an elemnt of a vector
+% Accessing an element of a vector
 vecA = 1:2:10
 vecA(2)
 
@@ -72,3 +72,35 @@ cv2([2 3])
 
 cv2([2 3]) = 100;
 cv2
+
+
+% Matricies
+% =========
+
+% Defining a 2x3 matrix; use a new line for the second row
+mat1 = [1 2 3
+        4 5 6];
+    
+% we can also use a semicolon to separate rows
+mat2 = [1 2 3; 4 5 6]
+
+% built-in functions
+mat3 = ones(4)    % Creates a 4x4 matrix of 1's
+mat4 = ones(4,2)  % Creares a 4x2 matrix of 1's
+
+mat5 = zeros(4)
+mat6 = zeros(4,2)
+
+mat7 = rand(4,3)
+mat8 = randi(100,4,2)
+
+% Accessing an element of a matrix
+mat8(3,2)  % element at 3rd row, 2ns column
+
+mat8(:,1) % all rows, first column. This results a column vector
+
+
+mat8(2,:) % second row, all columns
+    
+mat8(2:4, 1) % rows 2 to 4, first column
+

@@ -1,4 +1,4 @@
-% Lecture 3, part 1: Random numbers and built-in elementary functions
+% Lecture 3, Random numbers and built-in elementary functions
 % Chapter 1.4 and 1.8 Attaway
 
 
@@ -15,10 +15,10 @@ rng('shuffle')
 myRand2 = rand
 
 % Generating a random number between 0 and 10
-
+myRand3 = rand * 10;
 
 % Generating a random number between 10 and 20
-
+myRand4 = rand * (20 - 10) + 10;
 
 
 % getting the state of the random number generator and restoring it later
@@ -38,14 +38,14 @@ rand
 
 % Using "randi" to generate a random integer number up to 1000
 myIntRand = randi(1000)
-myIntRand2 = randi(1000);
+myIntRand2 = -randi(1000);
 
 
 % Resetting the integer random number generator to start with a fixed seed
 % of 125
 rng(125)
 
-% generating two random integers from 0 to 1000
+% generating two random integers from 1 to 1000
 randi(1000)
 randi(1000)
 
@@ -55,6 +55,10 @@ randi(1000)
 rng(125)
 randi(1000)
 randi(1000)
+
+
+% Generate a random number between -20 to +20, inclusive
+myRand = -21 + randi(41)
 
 
 % Built-in elementary functions
