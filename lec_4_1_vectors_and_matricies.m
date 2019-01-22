@@ -4,7 +4,7 @@
 % Initializing a row vector
 vec1 = [1 2 3 4 5]
 
-vec2 = [1,2,3,4,5]
+vec2 = [1,2, 3,4,5]
 
 
 
@@ -13,7 +13,9 @@ vec3 = 0:10
 
 vec4 = 0:2:10 % 0 to 10 in increments of 2
 
-vec5 = 0:2:5 % 
+vec = 0:3:10
+
+vec5 = 10:-1:0;
 
 
 % creating linearly space vectors using the "linspace" function
@@ -23,7 +25,7 @@ vec7 = linspace(1,5) % default count of 100 points
 
 % Ex.
 % create logarithemically spaced vectors using the "logspace" function
-
+vec8 = logspace(1,5,10)
 
 
 % using the "diff" function to compute the difference between adjescent
@@ -32,9 +34,9 @@ vec7 = linspace(1,5) % default count of 100 points
 
 
 % Combining two vectors
-vecA = [1:3];
+vecA = 1:3;
 vecB = linspace(1, 10, 5);
-VecC = ?
+VecC = [vecA vecB]
 
 
 % Accessing an element of a vector
