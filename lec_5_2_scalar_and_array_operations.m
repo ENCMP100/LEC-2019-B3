@@ -8,7 +8,7 @@
 % These are performed between a scalar and a matrix (or a scalar and a
 % vector)
 
-% Scalara Addition and Subtraction
+mat = reshape(1:12, 4, 3); % Scalara Addition and Subtraction
 
 mat % dusplay the value in the command window
 mat + 2

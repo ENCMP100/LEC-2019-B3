@@ -6,12 +6,16 @@
 % ===================================
 mat1 = rand(4,2); % 4x2 matrix of random numbers
 mat2 = rand(2,4); % 2x4 matrix
-vec1 = 1:10;      % 1x10 row vector
+vec = 1:10;      % 1x10 row vector
 
 % size
 [r1,c1] = size(mat1)
-[r2,c2] = size(mat1)
+[r2,c2] = size(mat2)
 [r3,c3] = size(vec)
+
+% Obtaining only one dimension
+numRows = size(mat1, 1)
+numCols = size(mat1, 2)
 
 % length
 l1 = length(mat1)
