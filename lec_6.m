@@ -128,9 +128,9 @@ fprintf('%d divided by %d is %.3f in three decimal places.\n', x, y, x/y);
 % trailing zeros for decimal places when necessary
 
 price = 12.5;
-fprintf('Price = %6.2f\n', price)
-fprintf('GST   = %6.2f\n', price*0.05)
-fprintf('Total = %6.2f\n', price*1.05)
+fprintf('Price = %5.2f\n', price)
+fprintf('GST   = %5.2f\n', price*0.05)
+fprintf('Total = %5.2f\n', price*1.05)
 
 
 % printing vectors
