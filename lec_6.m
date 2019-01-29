@@ -122,7 +122,7 @@ y = 7;
 fprintf('%d divided by %d is %f\n', x, y, x/y);
 
 % limiting the number of decimal places in floating point numbers
-fprintf('%d divided by %d is %.3f in three decimal places.\n', x, y, x/y);
+fprintf('%d divided by %d is %.3f in three decimal places.\n', x, y, x/y)
 
 % examples with display field widths and 
 % trailing zeros for decimal places when necessary
