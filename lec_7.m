@@ -22,7 +22,7 @@ title('Time and Temp')
 clf % clear figure
 x = 0:10:360;
 y = sind(x);
-plot(x,y, 'o--');
+plot(x,y, 'o-')
 
 % plotting a second curve on the same axes
 y2 = cosd(x);
@@ -37,7 +37,7 @@ ylabel('sin(x) or cos(x)')
 % plotted. 
 % The optional 'Location' property specifies where the legend should
 % appear.
-legend('sin', 'cos', 'Location', 'north') 
+legend('sine', 'cosine', 'Location', 'north') 
 
 % Turn the grid on.
 grid on

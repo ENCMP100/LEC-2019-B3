@@ -138,12 +138,14 @@ vec = 1:5;
 fprintf('%d ', vec) % prints all elements in one line
 fprintf('%d\n', vec) % print all elements, each in a new line
 
+fprintf('%d %d\n', vec)
+
 % printing matricies
 mat = reshape(1:12, 3, 4)';
 
 fprintf('%d ', mat) % takes elements column by column and prints in one line
 
-fprintf('%d\n', mat) % takes elements column by column and prints value one per line
+fprintf('%d \n', mat) % takes elements column by column and prints value one per line
 
 fprintf('%d %d\n', mat) % takes elements column by column and prints two per line
 
