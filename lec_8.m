@@ -28,11 +28,11 @@ isNegative = inVal < 0;
 % =================
 
 % logical OR and AND
-2 < 4 || 'a' == 'c'  % the second operand is not even evaluated
+2 < 4 || 'a' == 'c'  % the second operand is not even evaluated -- short circuit
 5 < 4 || 'a' == 'c'  % both operands are evaluated
 
 2 < 4 && 'a' == 'c'  % both operands are evaluated
-5 < 4 && 'a' == 'c'  % the second operand is not even evaluated
+5 < 4 && 'a' == 'c'  % the second operand is not even evaluated -- short circuit
 
 % negation
 ~ (4 < 5)
@@ -128,16 +128,6 @@ mat1 & mat2
 or(v1, v2)
 and(v1, v1)
 xor(v1, v2)
-
-
-% IF Statement: a common use of logical expressions
-
-myNum = input('Enter a number: ');
-
-if myNum < 0
-    disp('You entered a negative number')
-end
-disp('Done ...')
 
 
 
