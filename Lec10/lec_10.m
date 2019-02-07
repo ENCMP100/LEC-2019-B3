@@ -1,4 +1,4 @@
-% Lecture 10: Repetition or Loops
+% Lecture 10 Part 1: Repetition or Loops
 % Chapter 5.1, 5.2 amd 5.3
 
 
@@ -8,10 +8,6 @@ for i = 1:5
 end
     
     
-% EXERCISE: Create version 3 of "circleinfo.m" which would perform the
-% computation for 5 times.
-
-
 %% Nested FOR loops
 for i = 1:5
     for j = 1:3
@@ -36,10 +32,9 @@ end
 
 
 % Basic SUM function for matricies
-% Implement the sum function for matricies using nested FOR loops.
 mat = randi(20, 3, 4);
 [rows,cols] = size(mat);
-result = ??
+% result = ??
 for r = 1:rows
     for c = 1:cols
         
@@ -47,8 +42,21 @@ for r = 1:rows
 end
 
 
+%% EXERCISE: Create version 3 of "circleinfo.m" which would perform the
+% computation for 5 times.
+
+
 
 %% WHILE loop
+
+val = 1;
+
+while val > 0.5
+    val = rand;
+    fprintf('Value: %0.2f\n', val)
+end
+
+% See example: runsum.m
 
 
 
