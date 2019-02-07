@@ -8,12 +8,17 @@
 % Take the radius
 radius = input('Enter radius: ');
 
+if radius < 0
+    error('Invalid input');
+end
+
 % Calculate the area and circumference
 area = pi * radius^2;
 circumference = 2 * pi * radius;
 
 % Output results
 fprintf('Radius = %f\nArea = %f\nCircumference = %f\n', radius, area, circumference)
+
 
 %{
 radius
