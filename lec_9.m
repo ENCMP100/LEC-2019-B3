@@ -28,18 +28,31 @@ end
 
 
 %% IF/ELSEIF/ELSE statement
-num = rand;
+num = 0.6; %rand;
 
 if num < 0.5
-    fprintf('The number %.2f is smaller than 0.5\n', num)
+    fprintf('A: The number %.2f is smaller than 0.5\n', num)
 elseif num < 0.75
-    fprintf('The number %.2f is greater than or equal to 0.5 but less than 0.75\n', num)
+    fprintf('B: The number %.2f is greater than or equal to 0.5 but less than 0.75\n', num)
 else
-    fprintf('The number %.2f is greater than or equal to 0.75\n', num)
+    fprintf('C: The number %.2f is greater than or equal to 0.75\n', num)
+end
+
+% The functionality of the above if/elseif/else statement is identical to
+% the following:
+if num < 0.5
+    fprintf('A: The number %.2f is smaller than 0.5\n', num)
+else
+    if num < 0.75
+        fprintf('B: The number %.2f is greater than or equal to 0.5 but less than 0.75\n', num)
+    else
+        fprintf('C: The number %.2f is greater than or equal to 0.75\n', num)
+    end
 end
 
 
 % A LOOOOONG if/elseif/else statements with all conditions testing EQUALITY
+clc
 day = input('Enter the day number (Monday = 1, etc): ');
 if day == 1
     disp('It''s Monday')
@@ -52,7 +65,6 @@ elseif day == 4
 else
     disp('Can''t wait until next Monday ends')
 end
-
 
 
 %% SWITCH/CASE statement: a better alternative
