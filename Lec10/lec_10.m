@@ -7,11 +7,21 @@ for i = 1:5
     fprintf('%d: Hello world\n', i);
 end
     
-    
+
+vec = randi(99, 10, 1);
+for i = vec
+    fprintf('%d: Hello world\n', i);
+end
+
+
+
 %% Nested FOR loops
-for i = 1:5
-    for j = 1:3
-        fprintf('i=%d, j=%d: Hello world\n', i, j);
+clear
+clc
+
+for a = 1:5
+    for b = 1:3
+        fprintf('a=%d, b=%d: Hello world\n', a, b);
     end
 end
 
@@ -34,10 +44,10 @@ end
 % Basic SUM function for matricies
 mat = randi(20, 3, 4);
 [rows,cols] = size(mat);
-% result = ??
-for r = 1:rows
-    for c = 1:cols
-        
+result = zeros(1, cols);
+for c = 1:cols
+    for r = 1:rows
+        result(1,c) = result(1,c) + mat(r,c);
     end
 end
 
@@ -51,7 +61,7 @@ end
 
 val = 1;
 
-while val > 0.5
+while val < 0.5
     val = rand;
     fprintf('Value: %0.2f\n', val)
 end

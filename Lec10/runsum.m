@@ -1,5 +1,5 @@
-% RUNSUM prompts to input a none-zero number repeatedly and computes the
-% sum of all numbers entered. Entering a zero will terminate the program
+% RUNSUM prompts to input a number repeatedly and computes the
+% sum of all numbers entered. Entering an empty input will terminate the program
 
 
 clc

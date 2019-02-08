@@ -6,19 +6,27 @@
 
 
 %% E.g. 1: Vector sum
-vec = rand(10,1);
+clc
+clear
+
+vec = rand(100000000,1);
 
 % non-vectorized code
+tic
 sum1 = 0;
 for i = 1:length(vec)
     sum1 = sum1 + vec(i);
 end
+toc
 
 % vectorized code
+tic
 sum2 = sum(vec);
+toc
 
 fprintf('Sum1: %f\n', sum1)
 fprintf('Sum2: %f\n', sum2)
+
 
 %% E.g. 2: Counting values that are less than 0.5
 
@@ -33,7 +41,8 @@ for i = 1:length(vec)
 end
 
 % vectorized code
-
+count2 = sum(vec<0.5);
+return
 
 %% E.g. 3: Counting values that are in between 0.5 and 0.75, inclusive
 
@@ -48,7 +57,7 @@ for i = 1:length(vec)
 end
 
 % vectorized code
-
+count2_2 = sum(vec >= 0.5 & vec <= 0.75)
 
 %% E.g. 4: Setting all negative elements to zero
 mat = randi([-4 4], 5);
@@ -64,6 +73,16 @@ for i = 1:rows
 end
 
 % vectorized code
+mat(mat<0) = 0
+
+
+
+
+
+
+
+
+
 
 
 %% E.g. 5: Sum of products
