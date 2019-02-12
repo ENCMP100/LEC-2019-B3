@@ -59,6 +59,7 @@ end
 % vectorized code
 count2_2 = sum(vec >= 0.5 & vec <= 0.75)
 
+
 %% E.g. 4: Setting all negative elements to zero
 mat = randi([-4 4], 5);
 
@@ -77,14 +78,6 @@ mat(mat<0) = 0
 
 
 
-
-
-
-
-
-
-
-
 %% E.g. 5: Sum of products
 
 itemPrizes = [12.99 5.67 4.20 45.00 59.99 15.00 4.99];
@@ -97,4 +90,4 @@ for i = 1:length(itemCounts)
 end
 
 % vectorized code
-
+sum(itemPrizes .* itemCounts)
