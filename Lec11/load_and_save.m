@@ -1,7 +1,8 @@
 
 %% Saving data to a text file
 mat  = randi(100, 5);
-save mydata.dat mat -ascii
+mat2 = rand(5)
+save mydata.dat mat mat2 -ascii
 
 % view the file content on the command prompt
 type mydata.dat

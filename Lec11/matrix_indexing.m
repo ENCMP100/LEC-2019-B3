@@ -57,8 +57,8 @@ mat(mat<-0.5 | mat>0.5) = 0 % NOTE: we use element-by-element orand" operator "|
 
 
 %% Vectorization examples 1: Setting all values between 0.5 and 0.75, inclusive to 100
-
-mat = rand(5);
+ 
+ mat = rand(5);
 
 % non-vectorized code
 [rows,cols] = size(mat);
@@ -71,7 +71,7 @@ for i = 1:rows
 end
 
 % vectorized code
-
+mat(mat>=0.5 & mat<=0.75) = 100;
 
 %% Vectorization examples 2: Counting te number of positive elements
 
@@ -89,4 +89,5 @@ for i = 1:rows
 end
 
 % vectorized code
-
+count1 = sum(sum(mat>0))
+count2 = sum(mat(:)>0)
