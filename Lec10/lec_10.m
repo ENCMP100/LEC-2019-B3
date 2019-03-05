@@ -7,6 +7,8 @@ for i = 1:5
     fprintf('%d: Hello world\n', i);
 end
     
+while true
+end
 
 vec = randi(99, 10, 1);
 for i = vec
