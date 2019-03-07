@@ -6,23 +6,15 @@
 % Author: YOUR NAME
 % ENCMP100 B3 - Winter 2019.
 
-radius = input('Enter radius: ');
+rad = input('Enter radius: ');
 
-while ~isempty(radius)
+while ~isempty(rad)
     
-    if radius <= 0
-        disp('Radius must be positive')
-    else
-
-    % Calculate the area and circumference
-        area = pi * radius^2;
-        circumference = 2 * pi * radius;
-
-        % Output results
-        fprintf('Radius = %f\nArea = %f\nCircumference = %f\n\n', radius, area, circumference)
-    end
+    [area, circ] = circleinfo(rad);
+    
+    % Output results
+    fprintf('Radius = %f\nArea = %f\nCircumference = %f\n\n', rad, area, circ)
 
     % Take the radius again
-    radius = input('Enter radius: ');
-
+    rad = input('Enter radius: ');
 end

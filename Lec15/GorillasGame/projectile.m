@@ -10,4 +10,7 @@ function y = projectile(x, x0, y0, a0, v0)
 %  v0: Magnitude of the launching velocity
 %
 
+y = y0 + (x-x0) * tand(a0) - 0.5 * 9.81 * ((x-x0)/(v0*cosd(a0))).^2;
+
+end
 
