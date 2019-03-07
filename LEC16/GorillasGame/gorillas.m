@@ -23,12 +23,11 @@ maxHeight = 75; % maximum building height
 % Set up the stage by creating a bar chart (10 bars, each 12 units wide)
 [stageX, stageY] = setstage(w, N, minHeight, maxHeight);
 
-
 % Randomly positioning players (gorillas)
 [player1X, player1Y, player2X, player2Y] = setplayers(stageX, stageY);
 
 
-% Player 1 shoots a banana
+%% Player 1 shoots a banana
 clc
 disp('Gorilla facing east:');
 a0 = round(input('    Angle (degrees)? '));
@@ -42,7 +41,8 @@ y = projectile(x, player1X, player1Y, a0, v0);
 
 plot(x,y,'r-');
 
-% Player 2 shoots a banana
+
+%% Player 2 shoots a banana
 clc
 disp('Gorilla facing west:');
 a0 = round(input('    Angle (degrees)? '));

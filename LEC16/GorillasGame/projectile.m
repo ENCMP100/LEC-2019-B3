@@ -1,6 +1,6 @@
-function y = projectile(x, x0, y0, a0, v0)
+function y = calcprojectile(x, x0, y0, a0, v0)
 %
-% PROJECTILE: calculates the y values for give x for the projectile motion
+% CALCPROJECTILE: calculates the y values for give x for the projectile motion
 % defined by the parameters x0, y0, a0 and vo.
 %
 % Input:

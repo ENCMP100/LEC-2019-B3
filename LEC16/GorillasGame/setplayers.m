@@ -15,7 +15,7 @@ plot(p1x, p1y, 'p', 'MarkerSize', 20, 'MarkerFace', [1 0 1])
 
 % Place player 2 on a building which is east to the first player. This
 % player is facing west.
-idx2 = randi([idx1+1 length(stageX)-1]);
+idx2 = randi([idx1+2 length(stageX)-1]);
 p2x = stageX(idx2);
 p2y = stageY(idx2) + 3;
 plot(p2x, p2y, 'p', 'MarkerSize', 20, 'MarkerFace', 'r')
