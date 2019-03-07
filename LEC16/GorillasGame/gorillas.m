@@ -30,7 +30,7 @@ maxHeight = 75; % maximum building height
 
 % Player 1 shoots a banana
 clc
-disp('Gorilla (facing east):');
+disp('Gorilla facing east:');
 a0 = round(input('    Angle (degrees)? '));
 v0 = round(input('    Velocity (m/s)? '));
 
@@ -44,7 +44,7 @@ plot(x,y,'r-');
 
 % Player 2 shoots a banana
 clc
-disp('Gorilla (facing west):');
+disp('Gorilla facing west:');
 a0 = round(input('    Angle (degrees)? '));
 v0 = round(input('    Velocity (m/s)? '));
 
