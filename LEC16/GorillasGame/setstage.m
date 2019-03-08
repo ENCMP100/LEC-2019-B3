@@ -5,18 +5,15 @@ function [stageX, stageY] = setstage(buildingWidth, buildingCount, minHeight, ma
 % buildings.
 %
 
-
 % Launch a figure window
 figure(1)
 hold on
 rng('shuffle');
 
 % Set some initial parameters
-w = buildingWidth; % widith of a buuilding in meters
-N = buildingCount; % nnumber of buildings in the stage
 
-stageX = 1 : w : w * N; % x values
-stageY = randi([minHeight maxHeight], 1, N);
+stageX = 1 : buildingWidth : buildingWidth * buildingCount; % x values
+stageY = randi([minHeight maxHeight], 1, buildingCount);
 bar(stageX, stageY, 1)
 
 % Set x and y axis limits such that 

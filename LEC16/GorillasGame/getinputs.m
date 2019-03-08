@@ -13,7 +13,7 @@ end
 a0 = round(input('    Angle (degrees)? '));
 v0 = round(input('    Velocity (m/s)? '));
 
-if ~isFirstPlayr
+if ~isFirstPlayer
     a0 = 180 - a0;
 end
 end

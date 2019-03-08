@@ -27,11 +27,8 @@ maxHeight = 75; % maximum building height
 [player1X, player1Y, player2X, player2Y] = setplayers(stageX, stageY);
 
 
-%% Player 1 shoots a banana
-clc
-disp('Gorilla facing east:');
-a0 = round(input('    Angle (degrees)? '));
-v0 = round(input('    Velocity (m/s)? '));
+% Player 1 shoots a banana
+[a0, v0] = getinputs(true);
 
 % possible x values for player 1's projectile. 
 x = linspace(player1X, max(stageX)); % towards east
@@ -42,13 +39,8 @@ y = projectile(x, player1X, player1Y, a0, v0);
 plot(x,y,'r-');
 
 
-%% Player 2 shoots a banana
-clc
-disp('Gorilla facing west:');
-a0 = round(input('    Angle (degrees)? '));
-v0 = round(input('    Velocity (m/s)? '));
-
-a0 = 180 - a0; % angles measured from the anti-clockwise direction 
+% Player 2 shoots a banana
+[a0, v0] = getinputs(false);
 
 % possible x values for player 2's projectile. 
 x = linspace(player2X, min(stageX)); % towards the west
