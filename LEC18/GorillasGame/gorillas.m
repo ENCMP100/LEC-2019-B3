@@ -21,20 +21,20 @@ minHeight = 10; % minimum building height
 maxHeight = 75; % maximum building height
 
 % Set up the stage by creating a bar chart (10 bars, each 12 units wide)
-[stageX, stageY] = setstage(w, N, minHeight, maxHeight);
+stg = setstage(w, N, minHeight, maxHeight);
 
 % Randomly positioning players (gorillas)
-[player1X, player1Y, player2X, player2Y] = setplayers(stageX, stageY);
+[p1, p2] = setplayers(stg);
 
 
 % Player 1 shoots a banana
 [a0, v0] = getinputs(true);
 
 % possible x values for player 1's projectile. 
-x = linspace(player1X, max(stageX)); % towards east
+x = linspace(player1X, max(stg.X)); % towards east
 
 % calculating y values of the projectile
-y = projectile(x, player1X, player1Y, a0, v0);
+y = projectile(x, p1, a0, v0);
 
 plot(x,y,'r-');
 
@@ -43,10 +43,10 @@ plot(x,y,'r-');
 [a0, v0] = getinputs(false);
 
 % possible x values for player 2's projectile. 
-x = linspace(player2X, min(stageX)); % towards the west
+x = linspace(player2X, min(stg.X)); % towards the west
 
 % calculating y values of the projectile
-y = projectile(x, player2X, player2Y, a0, v0);
+y = projectile(x, p2, a0, v0);
 
 plot(x,y,'b-');
 
