@@ -21,10 +21,10 @@ minHeight = 10; % minimum building height
 maxHeight = 75; % maximum building height
 
 % Set up the stage by creating a bar chart (10 bars, each 12 units wide)
-stg = setstage(w, N, minHeight, maxHeight);
+s = setstage(w, N, minHeight, maxHeight);
 
 % Randomly positioning players (gorillas)
-[p1, p2] = setplayers(stg);
+[p1, p2] = setplayers(s);
 
 
 % Player 1 shoots a banana
