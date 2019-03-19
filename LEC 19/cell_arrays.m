@@ -27,12 +27,10 @@ val2 = cellMat{1,2}
 cellMat{2,2} = 'Mary had a little lamb'
 
 
-% Cell array of strings
+% Cell arrays of charactor vectors
 cvNames = {'Sue', 'Cathy', 'John'}
 
 strlength(cvNames)
-
-celldisp(cvNames)
 
 % Converting a cell array into a character array
 strBirds = ["parrot", "pigeon", "Magpie"]

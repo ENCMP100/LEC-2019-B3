@@ -6,6 +6,43 @@
 % ENCMP 100 B3, March 19, 2019
 %
 
+%% + operator for catenating string objects. Only works with strings, not char arrays
+str1 = "Hello";
+str2 = " World!!!";
+
+result = str1 + str2;
+disp(result)
+
+% The result of the above + operator is identical to strcat function.
+strcat(str1, str2)
+
+
+%% {} operator 
+% This can be used for converting a string object into a character array 
+% or accessing character array inside a string object
+
+myString = "Hello there ..."
+myString{1}
+
+myString{1} = 'How are you?';
+myString
+
+
+
+%% string: Converting other premitive types into strings
+
+string('This is an input provided as a character array')
+
+string(125)
+
+string(rand(5))
+
+string(true)
+
+myVec = rand(1, 5)
+myTest = myVec < 0.5
+string(myTest)
+
 %% strfind: Finding all occurrences of a sub-string inside a string
 
 strfind('she sells sea shells in the sea shore', 'sh')
@@ -30,13 +67,6 @@ str = '+1-780-492-9472';
 [token, str] = strtok(str, '-')
 [token, str] = strtok(str, '-')
 [token, str] = strtok(str, '-')
-
-%% eval: Evaluating a string as a MATLAB expression
-x = 1:5;
-y = eval('x.^2 + 5*x + 2');
-disp(y)
-
-eval('z = x.^2 + 5*x + 2')
 
 
 %% isletter: Returns a logical vector, identifying which positions have ltters
