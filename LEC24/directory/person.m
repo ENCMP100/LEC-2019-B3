@@ -21,14 +21,6 @@ classdef person < handle
             val = eval(statement);
         end
         
-        %% Sets the value of a given property
-        function set(obj, propName, propValue)
-            % Dynamically constructing the property assignment statement
-            statement = sprintf('obj.%s = ''%s'';', propName, propValue);
-            
-            % Evaluating the statement
-            eval(statement);                    
-        end
         
         %% Method ro display all properties and their values
         function print(obj)
