@@ -29,7 +29,7 @@ classdef person < handle
             for i = 1 : numel(listOfProperties)
                 propName = listOfProperties{i};
                 propVal = obj.get(propName);
-                fprintf('%d: %s => %s\n', i, propName, propVal)
+                fprintf('%s => %s\n', propName, propVal)
             end
         end
 
